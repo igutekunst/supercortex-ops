@@ -1,0 +1,3 @@
+do_token = "dop_v1_..."
+ssh_key_path = "/Users/igutek/.ssh/id_rsa.pub"
+region = "nyc3"

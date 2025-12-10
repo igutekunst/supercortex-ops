@@ -1,0 +1,38 @@
+---
+- name: Install Netmaker Server
+  hosts: masters[0]
+  become: true
+  vars:
+    # You MUST replace this with your actual base domain
+    base_domain: "supercortex.io"
+    email: "admin@supercortex.io"
+
+  tasks:
+    - name: Install Docker
+      shell: "curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh"
+      args:
+        creates: /usr/bin/docker
+
+    - name: Install Docker Compose
+      apt:
+        name: docker-compose-plugin
+        state: present
+    
+    - name: Download Netmaker Compose
+      get_url:
+        url: https://raw.githubusercontent.com/gravitl/netmaker/master/compose/docker-compose.yml
+        dest: /root/docker-compose.yml
+
+    - name: Create mosquitto conf dir
+      file:
+        path: /root/mosquitto/config
+        state: directory
+        recurse: yes
+
+    - name: Download Mosquitto Conf
+      get_url:
+        url: https://raw.githubusercontent.com/gravitl/netmaker/master/docker/mosquitto.conf
+        dest: /root/mosquitto/config/mosquitto.conf
+
+    # NOTE: In a real run, we need tosed/replace the domains in the docker-compose.yml
+    # For now, we are just scaffolding.
