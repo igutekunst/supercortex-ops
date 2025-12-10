@@ -1,0 +1,28 @@
+There is definitly a hierarchiacl fractal structure. I like that way of putting it.
+
+The top level "ontology" isn't strictly defined in one area, but through some key prompts, and also through a community of experts that each use their own systems to add different perspective.
+
+A computer security expert can chime in on a discussion at some point.
+Or the top level model that is interacting with me can reach out to the security expert and get guidance. The security expert will have some different base prompts, and acess to certain tools like a vector db of security paperes, code samples, other thing, that give it a more expert level perspective than a raw llm.
+
+There will be a recurisve process at the top level where portions of the core contet document evolve to more accuratly capture my intentions.
+
+The top level will also have another knoweldge db (and acess to other tools) to bring in system level context.
+
+The overall topology of experts and dbs and llms is what this project is actively researching.
+
+So the core is the hsm root of trust
+The traditional infrastructure (the k8s cluster(s), logging, firewalls, etc, under somewaht direct control by some high authority system.
+
+Within this system exist the agentic system components. Notably a codebase for running an llm, providing it with tools and context, logging all of its output.
+
+This system will be bootstraped
+
+1) we are starting design here in these docs
+2) We'll deploy a k3s cluster with core services and document it 
+3) We'll build some custom supporting services 
+4) We'll build the llm agent system
+5) We'll start enabling agents to do various tasks, with careful monitoring by me and "determinstic tradition systemss" (rate limits, quotas, firewalls, namespaces
+6) We'll start asking the system to prototype more advanced versions of itself. So use the cluster to build another cluster. This will capture knowledge so that creating a cluster becomes almost routine.
+7) We'll start doing other tasks, and crystalizing them into "routine" tasks, effectively "fine tuning" the llm, and giving it tools that are both natural langauge and programatic, with parts that need to be ridgid ridged, and loose parts loose
+8) Probably start developing a new programming language to express swarms of agents, or clsuters of clusters, as to start exploring how to copose different intentions and perspectives that apply cyrstalized knowledge to further a goal

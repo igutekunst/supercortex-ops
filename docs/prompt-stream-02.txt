@@ -1,0 +1,21 @@
+structure and flow. Structure enables flow. Well-defind apis, data types, architecture, the bones make it easier for information to flow between components. Too much structure and things get too rigid. Too little structure and there are no channels for things to flow. A big knot. Spagetti. This appleis to any layer of abstraction, whether API design, programming language, RPC infra, db and mroe
+
+namespaces and isolation and blast radius and "need to know basis" and  principle of least privilege. capibility tokens.  
+
+llm agents as fire. Need to be contained by structure, with constrained privileges. an LLM like a human can only reason about so much context reliably. Limiting the context limits the chance of error. 
+
+The system will have a mobile and web app for natural language input
+it will log all the interactions
+
+I think all I can say now is there are are too many design ideas to get out all at once. 
+
+This brings the discussion back to limiting context. There needs to be a way to compartmentalize the design work, so the degrees of freedom within a context are sufficeitnly limited that not to much damage can be done.
+
+There is a hierarchy or grid of diffent design dimensions.
+
+There is this general unaswered qeustion: Can engish specifications ever be good enough to produce the desired output? It seems like the "bandwidth" of english is limited, though can drastically be increased by the llm system being aware of how I think. Then the words I write have more information content, becaues they are rerferring to structures and patterns familar ot both me and the system.
+
+LLMs can only reason about so much context. 
+Different perspectives or dimension can be reasoned about differently, like people with different perspectives. 
+
+One "expert" could consider performance, another security, another how well it fits "best practices", another could monitor all the other work and look for patterns to find new "best practices." All these different design perspectives require context that can be stored in different ways.

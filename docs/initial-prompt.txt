@@ -1,0 +1,65 @@
+This folder will contain the design and implementation of a system for managing a complex system to do the will of the author.
+
+The system will consist of various different compute resources connected together in as of yet unsepecified topologies.
+
+There will be several inputs and outpus.
+
+There will be databases, kubernetes clusters, networks, applications and more.
+
+The system will be built up from the ground up from certain principles.
+
+The first goal of our conversation is to discuss and capture those principles. 
+
+first principle: i
+Notably i am concious, and as far as i can prove, the only conciousness in reality. as such, i am the principle
+
+Second principle: all must follow the principle
+
+Third principle: do no harm
+
+The reason do no harm is not the first principle is that any computer system is craeted by the intention of the author. Anything it does is ultimately the author/principles responsibiltiy. The highest goal is to do no harm. it is the responsibility of the principle to ensure anything done in his/her/my name does no harm. The sytem will be design to avoid doing harm, but ultimately the principle is principle
+
+From this principle merge some things that need to be concsiderd:
+
+LLMs and language is ambiguous
+Computer systems can have bugs, be hacked, and be connected to real world sytems that can do real harm
+
+Therefore the system shall be design with utmost safeguards in place so no uninteded side effect can occur. 
+
+This implies a root of trust. Again teh ultimate root is conciousness. the iam. 
+
+However, afik, computers can't directly "tap into" that, so the root of trust begins in the physical world with one or more hardware roots of trust.
+
+These contain private keys, ideally controlled only by the principle
+
+These keys are used to "sign" any information created intentionally by the principle, including the constutional core of the authority system, the most immutable part besides the keys themselves.
+
+This root will have then define rules, like n of m keys require to do certain actions, etc.
+
+All subservient systems will be programming to follow these rules
+
+The exact set of rules, and the delegation of power is tbd
+
+After this, the power flows into the systems.
+
+For example, VMs and images likely contain supervisor processes that will listen to messages accross many channels looking for command and intentions from any authorized authoriuty (with power flowing from principle
+
+The scope of what they can do is encoed in the constution
+
+Likely one of the deepest and most important thing is to terminate, so any rogue process can be ended if the principle commands it. Therefore if a virus or hacker takes controll of a system, or an LLM gets out of control the highest authority can alway stop it.
+
+On top of this core which is still tbd, will be a variety of core services, possilby running on different servers, conneted via vpn or other network links and more.
+
+On top of these will be one or more k8s clusters
+
+inside of these clusters will be more services
+
+Inside the clusters will be namespces
+
+Throughout the system there will be hard-coded sevies (normal software), and agents (llm powered "autonomous" systems).
+
+Enough for now. Just store all these wordds word-for-word in a docs/initial-prompt.txt
+
+Then clean them up into an overall system design as you see it going (derived-system-design.md) 
+
+We will dicuss and iterate from there
