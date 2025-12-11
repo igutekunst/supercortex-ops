@@ -51,3 +51,27 @@ This directory contains the **minimum viable manifests** to bootstrap the GitOps
 ### The "Payload" (`infrastructure/k8s/apps`, `observability`, etc.)
 Managed purely by ArgoCD.
 *   **Contents**: Authentik, SigNoz, Longhorn, User Apps.
+
+---
+
+## 5. Secret Management & Private Repos
+
+### Sealed Secrets
+**Problem**: We cannot commit raw secrets (passwords, keys) to Git.
+**Solution**: Use **Sealed Secrets** (PKI encryption).
+*   **Workflow**:
+    1.  `kubeseal < secret.yaml > sealed-secret.yaml` (Local encryption using public key).
+    2.  Commit `sealed-secret.yaml` to Git.
+    3.  Sealed Secrets Controller (in cluster) decrypts it to a standard Secret.
+*   **Benefit**: Safe to commit encrypted secrets to public or private repos.
+
+### Private GitHub Repository Access
+**Problem**: ArgoCD needs authentication to pull manifests from a private repo.
+**Solution**: HTTPS Authentication with Personal Access Token (PAT).
+*   **Workflow**:
+    1.  Generate a GitHub PAT (Scope: `repo`).
+    2.  Configure ArgoCD Credentials:
+        *   URL: `https://github.com/USER/REPO.git`
+        *   Username: `git` (or GitHub username)
+        *   Password: `PAT_TOKEN`
+    3.  ArgoCD stores this safely and uses it to sync `app-of-apps.yaml`.
